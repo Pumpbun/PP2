@@ -3,11 +3,10 @@ def recipe(grams):
     print(28.3495231 * grams)
 
 g = float(input())
-result = recipe(g) 
-print(result)
+recipe(g) 
 
 #ex.2
-def to_c(f):
+def to_c(f):  
     return (5 / 9) * (f - 32)
     
 a = float(input())
@@ -90,9 +89,9 @@ print(vol(radius))
 #ex.10
 def foo(list):
     unique_elements = []
-    for num in list:
-        if num not in unique_elements:
-            unique_elements.append(num)
+    for i in list:
+        if i not in unique_elements:
+            unique_elements.append(i)
     return(unique_elements)
 
 nums = list(map(int, input().split()))
@@ -112,16 +111,16 @@ def palindrome(s):
 
 word = input()
 print(palindrome(word))
-#another solution:
-def palindrome(s):
-    r = ''.join(reversed(s))
-    if s == r:
-        print("YES")
-    else:
-        print("NO")
+# #another solution:
+# def palindrome(s):
+#     r = ''.join(reversed(s))
+#     if s == r:
+#         print("YES")
+#     else:
+#         print("NO")
 
-word = input()
-palindrome(word)
+# word = input()
+# palindrome(word)
 
 #ex.12
 def histogram(nums):
@@ -129,7 +128,7 @@ def histogram(nums):
         print("*" * nums[i])
 
 nums = list(map(int, input().split()))
-histogram(nums)
+histogram(nums)  
 
 #ex.13
 import random

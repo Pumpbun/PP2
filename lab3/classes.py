@@ -19,7 +19,7 @@ class Shape:
 class Square(Shape):
     def __init__(self, length):
         super().__init__()
-        self.length=length
+        self.length = length
     def area(self):
         return self.length * self.length
     
@@ -65,7 +65,7 @@ class Point:
         self.y = y
 
     def show(self):
-        print("coordinates: (" + self.x + self.y + ")")
+        print("coordinates: (" + self.x + ";" + self.y + ")")
 
     def move(self, new_x, new_y):
         self.x = new_x
@@ -76,6 +76,14 @@ class Point:
         dy = self.y - other_point.y
         distance = (dx**2 + dy**2)**0.5
         return distance
+
+p1 = input()
+p2 = input()
+p1.show()
+p2.show()
+p1.move()
+p1.show()
+dist(p1, p2)
 
 #ex.5
 class Account:
@@ -96,8 +104,6 @@ class Account:
 #ex.6
 class PrimeFilter:
     def is_prime(self, num):
-        if num < 2:
-            return False
         for i in range(2, int(num**0.5) + 1):
             if num % i == 0:
                 return False

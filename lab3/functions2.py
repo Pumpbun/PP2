@@ -77,43 +77,43 @@ movies = [
 }
 ]
 
-3 #ex.1 
-# def imdb_score(morethan55):
-#     return [movie["imdb"] >= 5.5 for movie in movies]
+#ex.1 
+def imdb_score(morethan55):
+    return [movie["imdb"] >= 5.5 for movie in movies]
 
-# print(imdb_score(movies))
+print(imdb_score(movies))
 
-# #ex.2
-# def sublist(morethan55):
-#     return [m for m in movies if m["imdb"] >= 5.5]
+#ex.2
+def sublist(morethan55):
+    return [m for m in movies if m["imdb"] >= 5.5]
         
-# names = sublist(movies)
-# for m in names:
-#     print(m["name"])       
+names = sublist(movies)
+for m in names:
+    print(m["name"])       
 
-# #ex.3
-# def cat(category):
-#     for i in movies:
-#         if i["category"] == category:
-#             print(i["name"])
+#ex.3
+def cat(category):
+    for i in movies:
+        if i["category"] == category:
+            print(i["name"])
 
-# category = input()
-# (cat(category))
+category = input()
+(cat(category))
 
-# #ex.4
-# def avr(mvs, names):
-#     sum = 0
-#     count = 0
-#     for name in names:
-#         for m in mvs:
-#             if m["name"] == name:
-#                 sum += m["imdb"]
-#                 count += 1
-#     avrg_score = sum / count
-#     print(avrg_score)
+#ex.4
+def avr(mvs, names):
+    sum = 0
+    count = 0
+    for name in names:
+        for m in mvs:
+            if m["name"] == name:
+                sum += m["imdb"]
+                count += 1
+    avrg_score = sum / count
+    print(avrg_score)
 
-# names = list(input().split(","))
-# avr(movies, names)
+names = list(input().split(","))
+avr(movies, names)
 
 #ex.5
 def avr(category):
